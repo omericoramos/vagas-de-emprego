@@ -7,6 +7,9 @@ import (
 
 func initializeRoutes(router *gin.Engine) {
 
+	// Inicializar o handler (manipulador)
+	handler.InitializeHandlre()
+
 	v1 := router.Group("/api/v1")
 	{
 		v1.GET("/vagas", handler.ListOpeningsHandler)
