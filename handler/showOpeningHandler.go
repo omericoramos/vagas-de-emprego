@@ -13,7 +13,7 @@ func ShowOpeningHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 
 	if id == "" {
-		sendError(ctx, http.StatusBadRequest, fmt.Sprintf(errParamIsRequired("id", "queryParameter").Error()))
+		sendError(ctx, http.StatusBadRequest, errParamIsRequired("id", "queryParameter").Error())
 		return
 	}
 	opening := schema.Opening{}
