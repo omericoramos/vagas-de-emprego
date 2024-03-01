@@ -16,15 +16,15 @@ func initializeRoutes(router *gin.Engine) {
 	docs.SwaggerInfo.BasePath = basePath
 	v1 := router.Group(basePath)
 	{
-		v1.GET("/vagas", handler.ListOpeningsHandler)
+		v1.GET("/openings", handler.ListOpeningsHandler)
 
-		v1.GET("/vaga", handler.ShowOpeningHandler)
+		v1.GET("/opening", handler.ShowOpeningHandler)
 
 		v1.POST("/opening", handler.CreateOpeningHandler)
 
-		v1.DELETE("/vaga", handler.DeleteOpeningHandler)
+		v1.DELETE("/opening", handler.DeleteOpeningHandler)
 
-		v1.PATCH("/vaga", handler.UpdateOpeningHandler)
+		v1.PATCH("/opening", handler.UpdateOpeningHandler)
 	}
 
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))

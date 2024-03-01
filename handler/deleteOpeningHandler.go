@@ -8,6 +8,19 @@ import (
 	"github.com/omericoramos/vagas-de-emprego/schema"
 )
 
+// @BasePath /api/v1
+
+// @Summary Delete opening
+// @Description Delete a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @param id query string true "Opening identification"
+// @success 200 {object} DeleteOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [delete]
 func DeleteOpeningHandler(ctx *gin.Context) {
 
 	// pega o valor do id passado no contexto
