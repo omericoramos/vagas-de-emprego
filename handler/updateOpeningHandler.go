@@ -8,6 +8,20 @@ import (
 	"github.com/omericoramos/vagas-de-emprego/schema"
 )
 
+// @BasePath /api/v1
+
+// @Summary Update opening
+// @Description Update a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @param id query string true "Opening identification"
+// @param opening body UpdateOpeningRequest true "Opening data to update"
+// @success 200 {object} UpdateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [put]
 func UpdateOpeningHandler(ctx *gin.Context) {
 
 	request := UpdateOpeningRequest{}

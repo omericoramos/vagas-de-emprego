@@ -24,7 +24,7 @@ func initializeRoutes(router *gin.Engine) {
 
 		v1.DELETE("/opening", handler.DeleteOpeningHandler)
 
-		v1.PATCH("/opening", handler.UpdateOpeningHandler)
+		v1.PUT("/opening", handler.UpdateOpeningHandler)
 	}
 
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
