@@ -7,6 +7,16 @@ import (
 	"github.com/omericoramos/vagas-de-emprego/schema"
 )
 
+// @BasePath /api/v1
+
+// @Summary List opening
+// @Description List a new job openings
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @success 200 {object} ListOpeningsResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /openings [get]
 func ListOpeningsHandler(ctx *gin.Context) {
 
 	openings := []schema.Opening{}
